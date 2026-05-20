@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+
+
+{% block pageTitle -%}
+  Default page template
+{%- endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Default page template
+      </h1>
+
+      {% from "card/macro.njk" import card %}
+
+{{ card({
+  heading: "Heading level 3",
+  headingLevel: "3",
+  description: "Card description text goes here"
+}) }}
+
+{% from "card/macro.njk" import card %}
+
+{{ card({
+  heading: "Get your blood pressure checked in 5 years",
+  headingLevel: "3",
+  description: "<p>If you feel well and do not have any symptoms, check your blood pressure at a GP surgery or pharmacy at least once every 5 years, or sooner if you’ve been advised to by a healthcare professional.</p>Card description text goes here"
+}) }}
+
+
+
+
+    </div>
+  </div>
+{% endblock %}
+
+

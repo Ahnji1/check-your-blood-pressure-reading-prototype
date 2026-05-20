@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+{% from "header/macro.njk" import header %}
+{% from "footer/macro.njk" import footer %}
+
+
+
+{% block pageTitle -%}
+  Check your blood pressure reading
+{%- endblock %}
+
+{% block header %}
+  {{ header({
+    navigation: {
+      items: [
+        {
+          text: "Health A to Z",
+          href: "#"
+        },
+        {
+          text: "Live Well",
+          href: "#"
+        },
+        {
+          text: "Care and support",
+          href: "#"
+        },
+        {
+          text: "Pregnancy",
+          href: "#"
+        },
+        {
+          text: "NHS services",
+          href: "#"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk/",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/health-assessment-tools/",
+        text: "Health assessment tools"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">Check your blood pressure reading</h1>
+      <p>Use this service to:</p>
+           <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>check what your blood pressure reading means</li>
+        <li>get information about what to do next</li>
+      </ul>
+
+    
+
+      <h2 class="nhsuk-heading-l"> Who can use this tool</h2>
+      <p>You can use this service if you live in England.</p>
+      <p>You can also use this service for someone else.</p>
+
+      <h2 class="nhsuk-heading-l">Before you start</h2>
+      <p>You can use this tool if you or the person you're using it for:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>are aged 18 or over</li>
+        <li>have a recent blood pressure reading, either taken by a healthcare professional or with a home blood pressure monitor</li>
+      </ul>
+
+      <p>You should not use this tool if you or the person you're using it for:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>are aged 17 or under</li>
+        <li>are pregnant</li>
+        <li>have a medical condition that can affect your blood pressure</li>
+        <li>are taking medicines that can affect your blood pressure</li>
+        <li>have recently had surgery or experienced an injury</li>
+        <li>are feeling unwell with new symptoms such as dizziness, nausea, headache or chest pain</li>
+        <li>have recently seen a healthcare professional about your blood pressure and received medical advice</li>
+      </ul>
+
+      <p>You should not use this tool to diagnose any symptoms. If you're worried about your symptoms, get help from <a href="https://111.nhs.uk/">NHS 111 online</a> or call 111.</p>
+    
+
+      <h2 class="nhsuk-heading-l">How to check your blood pressure</h2>
+      <p>You should have a <a href="https://www.nhs.uk/tests-and-treatments/blood-pressure-test/">blood pressure test</a> if you're worried about your blood pressure at any time.</p>
+     <p>You can get a <a href="https://www.nhs.uk/nhs-services/pharmacies/find-a-pharmacy-that-offers-free-blood-pressure-checks/">free blood pressure check from your local pharmacy</a> if you are aged 40 or over and live in England.</p>
+      <p>You can also get your blood pressure checked at your local GP surgery, or some workplaces.</p>
+
+
+      {% from "details/macro.njk" import details %}
+
+{% call details({
+  summaryText: "How to measure your blood pressure at home"
+}) %}
+  <p>When you're taking your blood pressure at home there are things you can do to help get an accurate reading.</p>
+  <p>Try to:</p>
+  <ul>
+    <li>sit on an upright chair with a back</li>
+    <li>place your feet flat on the floor</li>
+    <li>rest your arm on a table and relax your hand and arm</li>
+    <li>wear something with short sleeves so the cuff does not go over clothes</li>
+    <li>relax, breathe normally and do not talk during the test</li>
+    <li>take another reading a few minutes after your first reading to check it's accurate</li>
+  </ul>
+  <p>If you've been asked by a healthcare professional to measure your blood pressure, do this as often as they advised, usually morning and evening.</p>
+  <p>If you regularly use a home blood pressure monitor you should tell your GP practice.</p>
+  <p><a href="https://www.youtube.com/watch?v=AXCFcftkric">Watch how to measure your blood pressure at home (The British Heart Foundation on YouTube)</a></p>
+  <p><a href="https://www.bhf.org.uk/informationsupport/heart-matters-magazine/medical/tests/blood-pressure-measuring-at-home">How to choose a reliable blood pressure monitor (British Heart Foundation)</a></p>
+
+  {% endcall %}
+
+
+      {{ button({
+        text: "Start now",
+        href: "/how-was-your-reading-done"
+      }) }}
+
+      <p>By using this tool you agree to the <a href="https://www.nhs.uk/our-policies/terms-and-conditions/">terms and conditions</a>.</p>
+
+      
+
+      
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+  {{ footer({
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}

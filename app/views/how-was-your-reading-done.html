@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+
+{% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+{% from "details/macro.njk" import details %}
+{% from "radios/macro.njk" import radios %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "start-page",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+    <form method="post" action="/enter-your-reading"></form>
+
+      <h1 class="nhsuk-heading-l">
+        How was your reading done?
+      </h1>
+
+      {% call details({
+        summaryText: "Why are we asking this?"
+      }) %}
+        <p>How you had your reading done will affect your result. Blood pressure targets for readings done at home are different to those done in a clinic or pharmacy by a healthcare professional.</p>
+      {% endcall %}
+
+      {{ radios({
+        idPrefix: "reading-method",
+        name: "readingMethod",
+       fieldset: {
+  legend: {
+    text: "How was your reading done?",
+    classes: "nhsuk-u-visually-hidden"
+  }
+},
+        items: [
+          {
+            value: "home",
+            text: "With a monitor at home"
+          },
+          {
+            value: "clinic",
+            text: "At a clinic or pharmacy by a healthcare professional"
+          }
+        ]
+      }) }}
+
+      {{ button({
+        text: "Continue"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+  {{ footer({
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}

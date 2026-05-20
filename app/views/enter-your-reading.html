@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+
+{% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "how-was-your-reading-done",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+       <form method="post" action="/check-your-answers"></form>
+
+      <h1 class="nhsuk-heading-l">
+        Enter your reading
+      </h1>
+     {% from "details/macro.njk" import details %}
+
+
+
+
+{% call details({
+  summaryText: "How do I enter my reading?"
+}) %}
+  <p>Your reading is made up of 2 numbers and is measured in millimetres of mercury (mmHg).</p>
+  <p>Enter the highest number first. This is the highest level your blood pressure reaches when your heart beats (systolic).</p>
+  <p>Then enter the lower number. This is the lowest level your blood pressure reaches when your heart relaxes between beats (diastolic).</p>
+{% endcall %}
+
+
+
+        {% from "input/macro.njk" import input %}
+
+{{ input({
+  label: {
+      text: "Systolic blood pressure"
+  },
+  id: "systoilc",
+  name: "systoilc",
+  suffix: "mmHg",
+  classes: "nhsuk-input--width-5",
+  spellcheck: false
+}) }}
+
+
+        {% from "input/macro.njk" import input %}
+
+{{ input({
+  label: {
+      text: "Diastolic blood pressure"
+  },
+  id: "diastolic",
+  name: "diastolic",
+  suffix: "mmHg",
+  classes: "nhsuk-input--width-5",
+  spellcheck: false
+}) }}
+
+
+        
+        
+        {{ button({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+
+
+{% block footer %}
+  {{ footer({
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
