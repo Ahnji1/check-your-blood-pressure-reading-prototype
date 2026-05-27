@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
   {{ backLink({
-    href: "enter-your-reading",
+    href: "/enter-your-reading",
     text: "Back"
   }) }}
 {% endblock %}
@@ -18,9 +18,33 @@
       <h1 class="nhsuk-heading-l">Check your answers</h1>
 
     
+      {% if data['readingMethod'] == "home" %}
+  {% set readingMethodText = "With a monitor at home" %}
+{% else %}
+  {% set readingMethodText = "clinic or pharmacy" %}
+    {% endif %}
+
+
 
       {{ summaryList({
         rows: [
+          {
+            key: {
+              text: "How was your reading done"
+            },
+             value: {
+        text: readingMethodText
+      },
+            actions: {
+              items: [
+                {
+                  href: "/how-was-your-reading-done",
+                  text: "Change",
+                  visuallyHiddenText: "how was your reading done"
+                }
+              ]
+            }
+          },
           {
             key: {
               text: "Systolic"
@@ -29,7 +53,7 @@
             actions: {
               items: [
                 {
-                  href: "enter-your-reading",
+                  href: "/enter-your-reading",
                   text: "Change",
                   visuallyHiddenText: "Systolic number"
                 }

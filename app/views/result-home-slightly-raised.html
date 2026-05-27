@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+
+{% from "back-link/macro.njk" import backLink %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "/check-your-answers",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+    {% from "card/macro.njk" import card %}
+
+{{ card({
+  heading: "134/68",
+  headingLevel: "3",
+  description: "Your blood pressure reading is slightly raised"
+}) }}
+
+
+{% from "card/macro.njk" import card %}
+
+{% set cardDescriptionHtml %}
+  <p>You should then continue to check your blood pressure every few months.</p>
+  <p>If your blood pressure increases to 135/85 or more, visit a GP surgery or pharmacy to have your blood pressure checked by a healthcare professional.</p>
+{% endset %}
+
+{{ card({
+  heading: "Take another reading in 1 month",
+  headingLevel: "3",
+  descriptionHtml: cardDescriptionHtml
+}) }}
+
+
+{% call details({
+  summaryText: "Get a calendar reminder",
+  classes: "nhsuk-expander"
+}) %}
+  <p>You can see your GP records by:</p>
+{% endcall %}
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-3"></div>
+</div>
+
+
+<h3>Lowering your blood pressure</h3>
+<p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect on your blood pressure.</p>
+<p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
+
+{% from "button/macro.njk" import button %}
+
+{{ button({
+  text: "Choose a habit to change"
+}) }}
+
+
+{% from "card/macro.njk" import card %}
+
+{% set cardDescriptionHtml %}
+  <ul>
+    <li>you get symptoms such as dizziness and fainting</li>
+  </ul>
+  <p>If you're worried about your symptoms, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a></p>
+{% endset %}
+
+{{ card({
+  type: "non-urgent",
+  heading: "Contact your GP surgery if:",
+  descriptionHtml: cardDescriptionHtml
+}) }}
+
+{% from "details/macro.njk" import details %}
+
+
+
+
+
+<h3>Tell a friend or family member to get tested</h3>
+<p>If they’re aged 40 or over, they should know their blood pressure</p>
+<p>They might be at a higher risk of high blood pressure if they’re overweight, smoke or are over 65. High blood pressure does not usually cause symptoms.</p>
+
+<a href="#"> Copy this tool's link</a>
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-6"></div>
+</div>
+
+
+
+{% from "button/macro.njk" import button %}
+
+{{ button({
+  text: "start-again",
+  classes: "nhsuk-button--secondary"
+}) }}
+
+
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+{% block footer %}
+  {{ footer({
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
