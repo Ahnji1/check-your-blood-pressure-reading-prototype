@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+
+{% from "back-link/macro.njk" import backLink %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "/check-your-answers",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+    {% from "card/macro.njk" import card %}
+
+{{ card({
+  heading: "121/91",
+  headingLevel: "3",
+  description: "Your blood pressure reading is high"
+}) }}
+
+
+
+{% from "card/macro.njk" import card %}
+{% from "action-link/macro.njk" import actionLink %}
+
+{% set cardDescriptionHtml %}
+  <p>Contact your GP surgery or pharmacy within 2 working days. Book an appointment to have your blood pressure checked by a healthcare professional.</p>
+
+  <p>Tell them your home blood pressure reading and that it’s high.</p>
+
+  <p>If you start to feel unwell in the meantime, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a>.</p>
+
+
+
+  <div class="nhsuk-u-margin-top-4">
+
+  <div class="nhsuk-u-margin-bottom-2">
+    {{ actionLink({
+      text: "Find a GP",
+      href: "https://www.nhs.uk/service-search/find-a-gp",
+      classes: "nhsuk-u-margin-bottom-0"
+    }) }}
+  </div>
+
+  <div>
+    {{ actionLink({
+      text: "Find a pharmacy",
+      href: "https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy",
+      classes: "nhsuk-u-margin-bottom-0"
+    }) }}
+  </div>
+
+</div>
+{% endset %}
+
+{{ card({
+  type: "non-urgent",
+  heading: "Get tested at a GP surgery or pharmacy",
+  descriptionHtml: cardDescriptionHtml
+}) }}
+
+
+
+<h3>Lowering your blood pressure</h3>
+<p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect on your blood pressure.</p>
+<p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
+
+{% from "button/macro.njk" import button %}
+{{ button({
+  text: "Choose a habit to change"
+}) }}
+
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-1"></div>
+</div>
+
+
+
+{% from "button/macro.njk" import button %}
+{{ button({
+  text: "start-again",
+  classes: "nhsuk-button--secondary"
+}) }}
+
+
+{% endblock %}
+
+
+
+
+{% block footer %}
+  {{ footer({
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
