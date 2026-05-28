@@ -2,9 +2,9 @@
 
 
 {% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
-
-
 
 {% block beforeContent %}
   {{ backLink({
@@ -14,48 +14,31 @@
 {% endblock %}
 
 
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-     
-    {% from "card/macro.njk" import card %}
 
-{{ card({
-  heading: "115/85",
-  headingLevel: "3",
-  description: "Your blood pressure reading is high"
-}) }}
+
+        <h2 class="nhsuk-heading-l"> Your reading needs checking</h2>
+      <p>We cannot give you a result based on the blood pressure readings you have entered.</p>
+      <p>Check your blood pressure again, or enter your readings again.</p>
+      <p>If your reading is correct, contact your GP surgery or pharmacy to have your blood pressure checked by a healthcare professional. </p>
 
 
 
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
-  <p>Follow the advice given to you by the healthcare professional who took your blood pressure reading.</p>
-  <p>If you start to feel unwell call <a href="">111</a> for advice.</p>
+  <p>If you have symptoms, go to <a href="">NHS 111 online</a> or call <a href="">111</a>.</p>
 {% endset %}
 
 {{ card({
-  heading: "Follow the advice given to you",
-  headingLevel: "3",
+  type: "urgent",
+  heading: "Get medical help",
   descriptionHtml: cardDescriptionHtml
 }) }}
 
-
-
-<h3>Lowering your blood pressure</h3>
-<p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect on your blood pressure.</p>
-<p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
-
-{% from "button/macro.njk" import button %}
-{{ button({
-  text: "Choose a habit to change"
-}) }}
-
-
-<div class="spacing-example">
-  <div class="nhsuk-u-padding-bottom-1"></div>
-</div>
 
 
 
@@ -67,9 +50,10 @@
 }) }}
 
 
+</div>
+  </div>
+
 {% endblock %}
-
-
 
 
 {% block footer %}
@@ -100,4 +84,3 @@
     }
   }) }}
 {% endblock %}
-

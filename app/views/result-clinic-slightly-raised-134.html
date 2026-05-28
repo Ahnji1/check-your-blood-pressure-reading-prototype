@@ -30,27 +30,18 @@
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
-  <p>You should then continue to check your blood pressure every few months.</p>
-  <p>If your blood pressure increases to 135/85 or more, visit a GP surgery or pharmacy to have your blood pressure checked by a healthcare professional.</p>
+  <p>You should also check your blood pressure at a GP surgery or pharmacy at least once every 5 years.</p>
+  <p>If you start to feel unwell, get your blood pressure checked at a GP surgery or pharmacy sooner.</p>
+  <p>If you’re overweight, smoke or are over 65, you should check your blood pressure more frequently and come back to this tool to get advice on what to do next.</p>
 {% endset %}
 
 {{ card({
-  heading: "Take another reading in 1 month",
+  heading: "Follow the advice the healthcare professional gave you",
   headingLevel: "3",
   descriptionHtml: cardDescriptionHtml
 }) }}
 
 
-{% call details({
-  summaryText: "Get a calendar reminder",
-  classes: "nhsuk-expander"
-}) %}
-  <p>You can see your GP records by:</p>
-{% endcall %}
-
-<div class="spacing-example">
-  <div class="nhsuk-u-padding-bottom-3"></div>
-</div>
 
 
 <h3>Lowering your blood pressure</h3>
@@ -100,7 +91,8 @@
 {% from "button/macro.njk" import button %}
 
 {{ button({
-  text: "start-again",
+  text: "start again",
+  href: "/start-page",
   classes: "nhsuk-button--secondary"
 }) }}
 

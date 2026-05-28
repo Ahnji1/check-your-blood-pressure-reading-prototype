@@ -21,7 +21,7 @@
     {% from "card/macro.njk" import card %}
 
 {{ card({
-  heading: "98/65",
+  heading: "95/65",
   headingLevel: "3",
   description: "Your blood pressure reading is healthy"
 }) }}
@@ -78,31 +78,13 @@
 
 
 
-
-
-<div class="spacing-example">
-  <div class="nhsuk-u-padding-bottom-3"></div>
-</div>
-
-
-<h3>Lowering your blood pressure</h3>
-<p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect on your blood pressure.</p>
-<p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
-
-{% from "button/macro.njk" import button %}
-
-{{ button({
-  text: "Choose a habit to change"
-}) }}
-
-
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
   <ul>
     <li>you get symptoms such as dizziness and fainting</li>
   </ul>
-  <p>If you're worried about your symptoms, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a></p>
+  <p>If you're worried about your symptoms, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a>.</p>
 {% endset %}
 
 {{ card({
@@ -110,6 +92,14 @@
   heading: "Contact your GP surgery if:",
   descriptionHtml: cardDescriptionHtml
 }) }}
+
+
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-3"></div>
+</div>
+
+
 
 {% from "details/macro.njk" import details %}
 
@@ -132,7 +122,8 @@
 {% from "button/macro.njk" import button %}
 
 {{ button({
-  text: "start-again",
+  text: "start again",
+  href: "/start-page",
   classes: "nhsuk-button--secondary"
 }) }}
 
