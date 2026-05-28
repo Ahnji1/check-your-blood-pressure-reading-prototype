@@ -29,17 +29,42 @@
 
 
 {% from "card/macro.njk" import card %}
+{% from "action-link/macro.njk" import actionLink %}
 
 {% set cardDescriptionHtml %}
-  <p>Follow the advice given to you by the healthcare professional who took your blood pressure reading.</p>
-  <p>If you start to feel unwell call <a href="">111</a> for advice.</p>
+  <p>Contact your GP surgery or pharmacy within 2 working days. Book an appointment to have your blood pressure checked by a healthcare professional.</p>
+
+  <p>Tell them your home blood pressure reading and that it’s high.</p>
+
+  <p>If you start to feel unwell in the meantime, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a>.</p>
+
+ <div class="nhsuk-u-margin-top-4">
+
+  <div class="nhsuk-u-margin-bottom-2">
+    {{ actionLink({
+      text: "Find a GP",
+      href: "https://www.nhs.uk/service-search/find-a-gp",
+      classes: "nhsuk-u-margin-bottom-0"
+    }) }}
+  </div>
+
+  <div>
+    {{ actionLink({
+      text: "Find a pharmacy",
+      href: "https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy",
+      classes: "nhsuk-u-margin-bottom-0"
+    }) }}
+  </div>
+
+</div>
 {% endset %}
 
 {{ card({
-  heading: "Follow the advice given to you",
-  headingLevel: "3",
+  type: "non-urgent",
+  heading: "Get tested at a GP surgery or pharmacy",
   descriptionHtml: cardDescriptionHtml
 }) }}
+
 
 
 

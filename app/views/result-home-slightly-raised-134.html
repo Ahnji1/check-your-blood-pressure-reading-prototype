@@ -21,60 +21,63 @@
     {% from "card/macro.njk" import card %}
 
 {{ card({
-  heading: "98/65",
+  heading: "134/68",
   headingLevel: "3",
-  description: "Your blood pressure reading is healthy"
+  description: "Your blood pressure reading is slightly raised"
 }) }}
 
 
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
-  <p>You should also check your blood pressure at a GP surgery or pharmacy at least once every 5 years.</p>
-  <p>If you start to feel unwell, get your blood pressure checked at a GP surgery or pharmacy sooner.</p>
-  <p>If you’re overweight, smoke or are over 65, you should check your blood pressure more frequently and come back to this tool to get advice on what to do next.</p>
+  <p>You should then continue to check your blood pressure every few months.</p>
+  <p>If your blood pressure increases to 135/85 or more, visit a GP surgery or pharmacy to have your blood pressure checked by a healthcare professional.</p>
 {% endset %}
 
 {{ card({
-  heading: "Follow the advice the healthcare professional gave you",
+  heading: "Take another reading in 1 month",
   headingLevel: "3",
   descriptionHtml: cardDescriptionHtml
 }) }}
 
 
 
-<h3>How to help prevent high blood pressure</h3> 
+{% from "details/macro.njk" import details %}
+{% from "checkboxes/macro.njk" import checkboxes %}
 
-{% from "do-dont-list/macro.njk" import list %}
+{% call details({
+  summaryText: "Get a calendar reminder",
+  classes: "nhsuk-expander"
+}) %}
+  <p>You should continue to check your blood pressure at home. Check again on Sunday 28 June 2026</p>
+  <p>You can choose to include today's reading of 134/68 in your calendar reminder:</p>
 
-{{ list({
-  title: "Do",
-  type: "tick",
+  {{ checkboxes({
+  idPrefix: "include-reading",
+  name: "includeReading",
   items: [
     {
-      text: "reduce the amount of salt in your diet"
-    },
-    {
-      text: "cut back on alcohol"
-    },
-    {
-      text: "try to follow a healthy diet"
-    },
-    {
-      text: "try to lose some weight if you’re overweight"
-    },
-    {
-      text: "exercise regularly"
-    },
-    {
-      text: "limit your caffeine intake"
-    },
-    {
-      text: "try to cut down or quit smoking if you smoke"
+      value: "yes",
+      text: "Yes, include my reading"
     }
   ]
 }) }}
 
+  <p><a href="">Add a calendar reminder to check your blood pressure (ICS)</a></p>
+{% endcall %}
+
+
+
+
+<h3>Lowering your blood pressure</h3>
+<p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect on your blood pressure.</p>
+<p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
+
+{% from "button/macro.njk" import button %}
+
+{{ button({
+  text: "Choose a habit to change"
+}) }}
 
 
 {% from "card/macro.njk" import card %}
@@ -83,7 +86,7 @@
   <ul>
     <li>you get symptoms such as dizziness and fainting</li>
   </ul>
-  <p>If you're worried about your symptoms, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a>.</p>
+  <p>If you're worried about your symptoms, go to <a href="https://111.nhs.uk/">NHS 111 online</a> or call <a href="#">111</a></p>
 {% endset %}
 
 {{ card({
@@ -91,14 +94,6 @@
   heading: "Contact your GP surgery if:",
   descriptionHtml: cardDescriptionHtml
 }) }}
-
-
-
-<div class="spacing-example">
-  <div class="nhsuk-u-padding-bottom-3"></div>
-</div>
-
-
 
 {% from "details/macro.njk" import details %}
 
