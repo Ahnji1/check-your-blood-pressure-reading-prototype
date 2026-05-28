@@ -17,15 +17,178 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-     
-    {% from "card/macro.njk" import card %}
 
-{{ card({
-  heading: "98/65",
-  headingLevel: "3",
-  description: "Your blood pressure reading is healthy"
-}) }}
-
+<div class="nhsuk-u-reading-width nhsuk-tools_info-card">
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <div id="bpt-result-graph-panel_nhsuk-bpt-chart__riiAn">
+        <h2 class="nhsuk-heading-m">
+          <div>98<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>65</div>
+        </h2>
+        <div class="bpt-result-classification-heading nhsuk-u-margin-bottom-6 nhsuk-body-m">
+          <div>Your blood pressure reading is healthy</div>
+        </div>
+        <figure class="nhsuk-u-margin-0">
+          <figcaption class="nhsuk-u-visually-hidden">Your blood pressure reading is shown on a chart here. A full description can be found in the text below it.</figcaption>
+          <div class="nhsuk-body-s">
+            <div class="nhsuk-bp-systolic-legend-wrapper" aria-hidden="true">
+              <div class="nhsuk-bp-systolic-legend-marker"></div>
+              <span>Systolic (high number)</span>
+            </div>
+            <div class="nhsuk-bp-graph" aria-hidden="true">
+              <div>
+                <div class="nhsuk-bp-systolic-axis-marker nhsuk-bp-systolic-axis-marker-80" style="bottom: 0%;">
+                  <div class="nhsuk-bp-systolic-axis-label">80</div>
+                </div>
+                <div class="nhsuk-bp-systolic-axis-marker nhsuk-bp-systolic-axis-marker-90" style="bottom: 11.1111%;">
+                  <div class="nhsuk-bp-systolic-axis-label">90</div>
+                </div>
+                <div class="nhsuk-bp-systolic-axis-marker nhsuk-bp-systolic-axis-marker-120" style="bottom: 44.4444%;">
+                  <div class="nhsuk-bp-systolic-axis-label">120</div>
+                </div>
+                <div class="nhsuk-bp-systolic-axis-marker" style="bottom: 61.1111%;">
+                  <div class="nhsuk-bp-systolic-axis-label">135</div>
+                </div>
+                <div class="nhsuk-bp-systolic-axis-marker nhsuk-bp-systolic-axis-marker-170" style="bottom: 100%;">
+                  <div class="nhsuk-bp-systolic-axis-label">170</div>
+                </div>
+              </div>
+              <div>
+                <div class="nhsuk-bp-diastolic-axis-marker nhsuk-bp-diastolic-axis-marker-50" style="left: 0%;">
+                  <div class="nhsuk-bp-diastolic-axis-label">65</div>
+                </div>
+                <div class="nhsuk-bp-diastolic-axis-marker nhsuk-bp-diastolic-axis-marker-60" style="left: 55.25%;">
+                  <div class="nhsuk-bp-diastolic-axis-label">85</div>
+                </div>
+                <div class="nhsuk-bp-diastolic-axis-marker nhsuk-bp-diastolic-axis-marker-100" style="left: 100%;">
+                  <div class="nhsuk-bp-diastolic-axis-label">100</div>
+                </div>
+              </div>
+              <div class="nhsuk-bp-graph-marker" style="left: 0%; bottom: 20%;">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_102759)">
+                    <path d="M5.18718 8.36931L4.48008 9.07641L5.18718 9.78352L11.3744 15.9707L5.18718 22.1579L4.48008 22.865L5.18718 23.5721L8.36916 26.7541L9.07627 27.4612L9.78338 26.7541L15.9706 20.5669L22.1577 26.7541L22.8649 27.4612L23.572 26.7541L26.7539 23.5721L27.461 22.865L26.7539 22.1579L20.5668 15.9707L26.7539 9.78352L27.461 9.07641L26.7539 8.36931L23.572 5.18732L22.8649 4.48022L22.1577 5.18732L15.9706 11.3745L9.78338 5.18732L9.07627 4.48022L8.36916 5.18732L5.18718 8.36931Z" fill="black" stroke="white" stroke-width="2"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="nhsuk-bp-classification-low" style="width: 55.25%; height: 11.1111%;"></div>
+              <div class="nhsuk-bp-classification-healthy" style="width: 55.25%; height: 44.4444%;"></div>
+              <div class="nhsuk-bp-classification-slightlyraised" style="width: 55.25%; height: 61.1111%;"></div>
+              <div class="nhsuk-bp-classification-high" style="width: 100%; height: 100%;"></div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+                <div class="nhsuk-bp-graph-cell"></div>
+              </div>
+              <div class="nhsuk-bp-graph-row">
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-row nhsuk-bp-first-in-column"></div>
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-column"></div>
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-column"></div>
+                <div class="nhsuk-bp-graph-cell nhsuk-bp-first-in-column"></div>
+              </div>
+              <div class="nhsuk-bp-region-boundary" style="width: 55.25%; height: 11.1111%;"></div>
+              <div class="nhsuk-bp-region-boundary" style="width: 55.25%; height: 44.4444%;"></div>
+              <div class="nhsuk-bp-region-boundary" style="width: 55.25%; height: 61.1111%;"></div>
+            </div>
+            <div class="nhsuk-bp-diastolic-legend-wrapper" aria-hidden="true">
+              <div class="nhsuk-bp-diastolic-legend-marker"></div>
+              <span>Diastolic (low number)</span>
+            </div>
+          </div>
+          <div aria-hidden="true">
+            <div class="nhsuk-card nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-3 nhsuk-u-secondary-text-color nhsuk-body-s nhsuk-u-padding-3 nhsuk-chart-legend-card">
+              <div class="nhsuk-chart-legend-key-wrapper ">
+                <div class="nhsuk-chart-legend-key nhsuk-bp-legend-key-classification-high"></div>
+                High
+              </div>
+              <div class="nhsuk-chart-legend-key-wrapper ">
+                <div class="nhsuk-chart-legend-key nhsuk-bp-legend-key-classification-slightlyraised"></div>
+                Slightly raised
+              </div>
+              <div class="nhsuk-chart-legend-key-wrapper ">
+                <div class="nhsuk-chart-legend-key nhsuk-bp-legend-key-classification-healthy"></div>
+                Healthy
+              </div>
+              <div class="nhsuk-chart-legend-key-wrapper ">
+                <div class="nhsuk-chart-legend-key nhsuk-bp-legend-key-classification-low"></div>
+                Low
+              </div>
+              <div class="nhsuk-chart-legend-key-wrapper ">
+                <div class="nhsuk-chart-legend-key nhsuk-bp-legend-key-marker">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1346_102759)">
+                      <path d="M5.18718 8.36931L4.48008 9.07641L5.18718 9.78352L11.3744 15.9707L5.18718 22.1579L4.48008 22.865L5.18718 23.5721L8.36916 26.7541L9.07627 27.4612L9.78338 26.7541L15.9706 20.5669L22.1577 26.7541L22.8649 27.4612L23.572 26.7541L26.7539 23.5721L27.461 22.865L26.7539 22.1579L20.5668 15.9707L26.7539 9.78352L27.461 9.07641L26.7539 8.36931L23.572 5.18732L22.8649 4.48022L22.1577 5.18732L15.9706 11.3745L9.78338 5.18732L9.07627 4.48022L8.36916 5.18732L5.18718 8.36931Z" fill="black" stroke="white" stroke-width="2"></path>
+                    </g>
+                  </svg>
+                </div>
+                Your reading
+              </div>
+            </div>
+          </div>
+        </figure>
+        <details class="nhsuk-details nhsuk-u-margin-bottom-0">
+          <summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Chart description</span></summary>
+          <div class="nhsuk-details__text">
+            <div>
+              <p>This blood pressure chart shows your reading of 98<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>65 as a cross in the healthy blood pressure area.</p>
+              <p>The vertical line (Y-axis) shows systolic blood pressure numbers. The horizontal line (X-axis) shows diastolic blood pressure numbers.</p>
+              <p>The chart is divided into 4 areas.</p>
+              <ul>
+                <li>Low blood pressure is shown in purple. It ranges from 80<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>65 to 89<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>84.</li>
+                <li>Healthy blood pressure is shown in green. It ranges from 90<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>65 to 120<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>84.</li>
+                <li>Slightly raised blood pressure is shown in yellow. It ranges from 121<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>65 to 134<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>84.</li>
+                <li>High blood pressure is shown in red. It ranges from 135<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>85 to 169<span class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>99.</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% from "card/macro.njk" import card %}
 
@@ -44,7 +207,7 @@
 
 
 
-<h3>How to help prevent high blood pressure</h3> 
+<h3>How to help prevent high blood pressure</h3>
 
 {% from "do-dont-list/macro.njk" import list %}
 
